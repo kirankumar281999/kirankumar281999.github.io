@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kiran Kumar | Performance Marketing, Google Ads and Meta Ads</title>
+<meta name="description" content="Kiran Kumar runs Meta Ads and Google Ads lead generation campaigns for education and real estate clients in Bengaluru. Campaign numbers, data projects and contact.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f6f1e7;
+    --card: #fffdf8;
+    --ink: #1c1a17;
+    --muted: #6b655c;
+    --line: #ddd5c6;
+    --accent: #c2410c;
+    --accent-soft: #fbe6d8;
+    --green: #1f5c4a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font: 400 17px/1.6 Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+  h1, h2, h3, .num { font-family: Fraunces, Georgia, serif; font-weight: 600; letter-spacing: -0.01em; }
+
+  /* nav */
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 22px 0; font-size: 15px; }
+  nav .me { font-family: Fraunces, Georgia, serif; font-weight: 600; font-size: 19px; text-decoration: none; }
+  nav ul { list-style: none; display: flex; gap: 26px; }
+  nav ul a { text-decoration: none; color: var(--muted); }
+  nav ul a:hover { color: var(--ink); }
+
+  /* hero */
+  .hero { padding: 56px 0 64px; }
+  .tag { display: inline-block; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px; }
+  h1 { font-size: clamp(38px, 6.4vw, 72px); line-height: 1.04; max-width: 15ch; }
+  h1 em { font-style: italic; color: var(--accent); }
+  .hero p { max-width: 58ch; margin-top: 24px; font-size: 19px; color: #3d3933; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+  .btn { display: inline-block; padding: 13px 22px; border-radius: 999px; text-decoration: none; font-weight: 600; font-size: 15px; border: 1.5px solid var(--ink); transition: transform .15s ease; }
+  .btn:hover { transform: translateY(-2px); }
+  .btn.solid { background: var(--ink); color: var(--paper); }
+
+  /* numbers */
+  .numbers { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1.5px solid var(--ink); border-bottom: 1.5px solid var(--ink); }
+  .numbers div { padding: 28px 20px 26px 0; }
+  .numbers div + div { padding-left: 24px; border-left: 1px solid var(--line); }
+  .num { font-size: clamp(30px, 4.2vw, 46px); line-height: 1; display: block; }
+  .numbers small { display: block; margin-top: 10px; font-size: 14px; color: var(--muted); line-height: 1.4; }
+
+  section { padding: 76px 0 0; }
+  h2 { font-size: clamp(28px, 3.6vw, 40px); line-height: 1.15; margin-bottom: 10px; }
+  .lede { color: var(--muted); max-width: 60ch; margin-bottom: 34px; }
+
+  /* campaign cards */
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 26px 24px; display: flex; flex-direction: column; }
+  .card .kind { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--green); margin-bottom: 12px; }
+  .card h3 { font-size: 23px; line-height: 1.2; margin-bottom: 14px; }
+  .card p { font-size: 15.5px; color: #3d3933; }
+  .facts { list-style: none; margin-top: 18px; border-top: 1px solid var(--line); }
+  .facts li { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 14.5px; }
+  .facts li span:first-child { color: var(--muted); }
+  .facts li span:last-child { font-weight: 600; text-align: right; }
+  .card .more { margin-top: auto; padding-top: 18px; font-size: 14.5px; font-weight: 600; color: var(--accent); text-decoration: none; }
+  .card .more:hover { text-decoration: underline; }
+  .note { margin-top: 22px; background: var(--accent-soft); border-radius: 14px; padding: 20px 24px; font-size: 15.5px; }
+  .note strong { font-weight: 600; }
+
+  /* experience */
+  .job { display: grid; grid-template-columns: 190px 1fr; gap: 24px; padding: 26px 0; border-top: 1px solid var(--line); }
+  .job:last-child { border-bottom: 1px solid var(--line); }
+  .job .when { font-size: 14.5px; color: var(--muted); padding-top: 4px; }
+  .job h3 { font-size: 22px; line-height: 1.25; }
+  .job .where { font-size: 15px; color: var(--muted); margin: 2px 0 10px; }
+  .job ul { padding-left: 18px; font-size: 15.5px; color: #3d3933; }
+  .job li + li { margin-top: 5px; }
+
+  /* skills */
+  .skills { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px 40px; }
+  .skills h3 { font-family: Inter, sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chips span { border: 1px solid var(--line); background: var(--card); border-radius: 999px; padding: 6px 14px; font-size: 14.5px; }
+
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .plain { list-style: none; font-size: 15.5px; }
+  .plain li { padding: 12px 0; border-top: 1px solid var(--line); }
+  .plain li:last-child { border-bottom: 1px solid var(--line); }
+  .plain a { color: var(--accent); font-weight: 600; text-decoration: none; }
+  .plain a:hover { text-decoration: underline; }
+  .plain small { display: block; color: var(--muted); font-size: 14px; }
+
+  /* contact */
+  .contact { margin-top: 84px; background: var(--ink); color: var(--paper); border-radius: 20px; padding: 56px 40px; text-align: center; }
+  .contact h2 { font-size: clamp(30px, 4.4vw, 48px); margin-bottom: 12px; }
+  .contact p { color: #c9c2b5; max-width: 50ch; margin: 0 auto 28px; }
+  .contact .btn { border-color: var(--paper); }
+  .contact .btn.solid { background: var(--paper); color: var(--ink); }
+  .contact .cta { justify-content: center; margin-top: 0; }
+  footer { padding: 30px 0 44px; font-size: 14px; color: var(--muted); text-align: center; }
+
+  /* hero photo */
+  .hero { display: grid; grid-template-columns: 1fr 280px; gap: 48px; align-items: center; }
+  .photo { position: relative; width: 260px; height: 300px; justify-self: end; }
+  .photo::before { content: ""; position: absolute; inset: 0; border-radius: 28px; background: var(--accent); transform: rotate(6deg); transition: transform .5s ease; }
+  .photo:hover::before { transform: rotate(-4deg); }
+  .photo img, .photo .initials { position: relative; width: 100%; height: 100%; border-radius: 28px; object-fit: cover; object-position: center top; border: 4px solid var(--card); background: var(--green); display: block; }
+  .photo .initials { display: none; align-items: center; justify-content: center; color: var(--paper); font: 600 84px Fraunces, Georgia, serif; }
+  .photo.noimg img { display: none; }
+  .photo.noimg .initials { display: flex; }
+  .photo .badge { position: absolute; left: -22px; bottom: 26px; background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; font-size: 13px; font-weight: 600; box-shadow: 0 6px 18px rgba(28,26,23,.12); animation: bob 4s ease-in-out infinite; white-space: nowrap; }
+  .photo .badge i { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #2e9e6b; margin-right: 7px; animation: pulse 1.8s ease-in-out infinite; }
+
+  /* motion */
+  h1 em { background: linear-gradient(var(--accent), var(--accent)) no-repeat 0 96% / 0 3px; animation: underline 0.9s 0.9s ease forwards; }
+  .card { transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+  .card:hover { transform: translateY(-6px); box-shadow: 0 14px 30px rgba(28,26,23,.10); border-color: var(--accent); }
+  .more { transition: letter-spacing .2s ease; }
+  .card:hover .more { letter-spacing: .02em; }
+  .chips span { transition: background .2s ease, color .2s ease, transform .2s ease; }
+  .chips span:hover { background: var(--ink); color: var(--paper); transform: translateY(-2px); }
+  nav ul a { position: relative; }
+  nav ul a::after { content: ""; position: absolute; left: 0; bottom: -4px; width: 0; height: 2px; background: var(--accent); transition: width .25s ease; }
+  nav ul a:hover::after { width: 100%; }
+  .js .rise { opacity: 0; transform: translateY(22px); animation: rise .7s ease forwards; animation-delay: calc(var(--i, 0) * 110ms + 100ms); }
+  .js .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; transition-delay: calc(var(--i, 0) * 90ms); }
+  .js .reveal.in { opacity: 1; transform: none; }
+  @keyframes rise { to { opacity: 1; transform: none; } }
+  @keyframes underline { to { background-size: 100% 3px; } }
+  @keyframes bob { 50% { transform: translateY(-7px); } }
+  @keyframes pulse { 50% { opacity: .35; } }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .js .rise, .js .reveal { opacity: 1; transform: none; }
+    h1 em { background-size: 100% 3px; }
+    html { scroll-behavior: auto; }
+  }
+
+  @media (max-width: 860px) {
+    .hero { grid-template-columns: 1fr; gap: 36px; }
+    .photo { justify-self: start; width: 200px; height: 232px; grid-row: 1; margin-left: 6px; }
+    .photo .badge { left: auto; right: -70px; }
+    nav ul { display: none; }
+    .hero { padding: 28px 0 44px; }
+    .numbers { grid-template-columns: 1fr 1fr; }
+    .numbers div { padding: 22px 12px 20px 0; }
+    .numbers div + div { padding-left: 0; border-left: 0; }
+    .numbers div:nth-child(even) { padding-left: 18px; border-left: 1px solid var(--line); }
+    .numbers div:nth-child(n+3) { border-top: 1px solid var(--line); }
+    .cards, .skills, .two { grid-template-columns: 1fr; }
+    .job { grid-template-columns: 1fr; gap: 4px; }
+    section { padding-top: 56px; }
+    .contact { padding: 44px 22px; margin-top: 60px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <nav>
+    <a class="me" href="#top">Kiran Kumar</a>
+    <ul>
+      <li><a href="#campaigns">Campaigns</a></li>
+      <li><a href="#projects">Data projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero" id="top">
+    <div>
+      <span class="tag rise" style="--i:0">Performance marketing · Bengaluru</span>
+      <h1 class="rise" style="--i:1">I run ads that bring in <em>quality leads.</em></h1>
+      <p class="rise" style="--i:2">I'm Kiran. For a little over a year I have been running Meta Ads and Google Ads at ClassFull for schools, colleges, a university and one real estate client. Before marketing I worked with data, so I'm at home in the numbers behind a campaign.</p>
+      <div class="cta rise" style="--i:3">
+        <a class="btn solid" href="mailto:kirankumarrau@gmail.com">Email me</a>
+        <a class="btn" href="https://www.linkedin.com/in/kumarkiran2/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/kirankumar281999" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <div class="photo rise" style="--i:2">
+      <img src="photo.jpg" alt="Kiran Kumar" onerror="this.parentNode.classList.add('noimg')">
+      <span class="initials" aria-hidden="true">KK</span>
+      <span class="badge"><i></i>Google Ads · Meta Ads</span>
+    </div>
+  </header>
+
+  <div class="numbers reveal">
+    <div><span class="num" data-count="20" data-pre="₹" data-suf=" lakh+">₹20 lakh+</span><small>Meta Ads spend managed</small></div>
+    <div><span class="num" data-count="3800" data-suf="+">3,800+</span><small>leads generated</small></div>
+    <div><span class="num" data-count="100" data-suf="M+">100M+</span><small>impressions across lead gen and awareness</small></div>
+    <div><span class="num" data-count="57" data-pre="₹">₹57</span><small>lowest cost per lead, college admissions</small></div>
+  </div>
+
+  <section id="campaigns">
+    <h2>Campaign work</h2>
+    <p class="lede">At ClassFull I handle 6 education institutions and one real estate client, from planning and setup to optimization and reporting. Three pieces of that work:</p>
+    <div class="cards">
+      <article class="card">
+        <span class="kind">University · Meta Ads</span>
+        <h3>48 campaigns for one university</h3>
+        <p>Lead generation and awareness campaigns for a single university account.</p>
+        <ul class="facts">
+          <li><span>Spend</span><span>₹10.9 lakh</span></li>
+          <li><span>Leads</span><span>1,800+</span></li>
+          <li><span>Impressions</span><span>87 million</span></li>
+          <li><span>Reach</span><span>32 million</span></li>
+        </ul>
+      </article>
+      <article class="card">
+        <span class="kind">Real estate · Meta Ads</span>
+        <h3>10 residential project campaigns</h3>
+        <p>Lead generation for residential projects, each with its own campaign.</p>
+        <ul class="facts">
+          <li><span>Spend</span><span>₹6.2 lakh</span></li>
+          <li><span>Leads</span><span>850+</span></li>
+          <li><span>Lowest cost per lead</span><span>₹268</span></li>
+        </ul>
+      </article>
+      <article class="card">
+        <span class="kind">Schools and colleges · Meta Ads</span>
+        <h3>Bringing admission cost per lead down</h3>
+        <p>Kept reworking bids, budgets, ad creatives and audience targeting until the cost per lead dropped.</p>
+        <ul class="facts">
+          <li><span>College campaign</span><span>as low as ₹57</span></li>
+          <li><span>School campaign</span><span>as low as ₹137</span></li>
+        </ul>
+      </article>
+    </div>
+    <p class="note"><strong>On Google Ads:</strong> I set up and run Search, Performance Max and Display campaigns after doing the keyword, audience and competitor research. Every week and month I put the numbers into Excel and PowerPoint reports and present them to the clients.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Data projects</h2>
+    <p class="lede">Before marketing I trained in SQL and Power BI. These are practice projects on AtliQ datasets, and the reason I'm comfortable with reporting today.</p>
+    <div class="cards">
+      <article class="card">
+        <span class="kind">MySQL · Excel · Power BI</span>
+        <h3>Consumer Goods Ad-Hoc Insights</h3>
+        <p>Wrote SQL queries on a dataset of over 1 million rows to answer 10+ business questions from management. Used CTEs, subqueries and rank functions. One finding: November 2021 sales came to nearly $32 million, almost double the previous November.</p>
+        <a class="more" href="https://github.com/kirankumar281999/Consumer-Goods_Ad-Hoc-Insights" target="_blank" rel="noopener">See it on GitHub →</a>
+      </article>
+      <article class="card">
+        <span class="kind">Power BI · SQL · Excel</span>
+        <h3>AtliQ Grands Hospitality Analytics</h3>
+        <p>A Power BI dashboard on 3 months of hotel chain data. It showed revenue of ₹1.7 billion and an average occupancy of 58%, and tracks RevPAR, ADR, Realization % and the booking metrics.</p>
+        <a class="more" href="https://app.powerbi.com/view?r=eyJrIjoiMTU3YjlhMTMtNjBlNi00MGQ3LWIxZGYtOTM4MjlmZTI3NGYyIiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9" target="_blank" rel="noopener">Open the live dashboard →</a>
+      </article>
+      <article class="card">
+        <span class="kind">Power BI · SQL · Excel · DAX Studio</span>
+        <h3>Business 360</h3>
+        <p>A Power BI dashboard on global sales, pulling data from Excel/CSV files and a SQL database. Separate Finance, Sales, Marketing, Supply Chain and Executive views, with Net Sales, COGS, Gross Margin and Net Profit.</p>
+        <a class="more" href="https://app.powerbi.com/view?r=eyJrIjoiNTM1YWNkOTgtOGEyOC00ZGQ0LTg0MTItOTU0YzBiM2I5MGFjIiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9" target="_blank" rel="noopener">Open the live dashboard →</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <p class="lede">Engineering degree, then SAP and reporting, then data, then ads.</p>
+    <div class="job">
+      <div class="when">Oct 2025 – Present</div>
+      <div>
+        <h3>Digital Marketing Executive</h3>
+        <p class="where">ClassFull (Valerian E-Commerce OPC Pvt. Ltd.), Bengaluru</p>
+        <ul>
+          <li>Run Meta Ads and Google Ads for 6 education institutions and one real estate client.</li>
+          <li>A little over ₹20 lakh spent on Meta across 100+ lead generation and awareness campaigns.</li>
+          <li>Weekly and monthly performance reports for clients in Excel and PowerPoint.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="job">
+      <div class="when">May 2023 – Nov 2023</div>
+      <div>
+        <h3>Data Science Intern</h3>
+        <p class="where">Onlei Technologies, Noida</p>
+        <ul>
+          <li>Data analysis and dashboard reports in SQL Server, Power BI, Python and Advanced Excel.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="job">
+      <div class="when">Sep 2021 – May 2023</div>
+      <div>
+        <h3>Packaged App Development Associate</h3>
+        <p class="where">Accenture India Pvt. Ltd., Bengaluru</p>
+        <ul>
+          <li>Validated SAP production data for audits. Accuracy improved by 25%.</li>
+          <li>Automated the recurring reports with Excel and Power Query. Manual work came down by around 30%.</li>
+          <li>Took the weekly status call with the onshore team, usually on 50+ open tickets.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>What I work with</h2>
+    <p class="lede">Tools I have worked with, in ads and in reporting.</p>
+    <div class="skills">
+      <div>
+        <h3>Google Ads</h3>
+        <div class="chips"><span>Search</span><span>Performance Max</span><span>Display</span><span>Keyword research</span><span>Bid and budget management</span></div>
+      </div>
+      <div>
+        <h3>Meta Ads</h3>
+        <div class="chips"><span>Lead generation</span><span>Awareness</span><span>Audience targeting</span><span>Ad creative testing</span></div>
+      </div>
+      <div>
+        <h3>Reporting and data</h3>
+        <div class="chips"><span>Advanced Excel</span><span>Power Query</span><span>Power Pivot</span><span>Power BI</span><span>SQL</span><span>Python basics</span><span>PowerPoint</span></div>
+      </div>
+      <div>
+        <h3>CRM</h3>
+        <div class="chips"><span>Meritto</span><span>Salesforce</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="two">
+      <div>
+        <h2>Certifications</h2>
+        <ul class="plain">
+          <li><a href="https://www.hackerrank.com/certificates/413440f73dd7" target="_blank" rel="noopener">SQL (Basic)</a><small>HackerRank</small></li>
+          <li><a href="https://www.hackerrank.com/certificates/34636bb6b9bf" target="_blank" rel="noopener">SQL (Intermediate)</a><small>HackerRank</small></li>
+          <li><a href="https://www.hackerrank.com/profile/KumarKiran" target="_blank" rel="noopener">4-star Silver badge in SQL</a><small>HackerRank</small></li>
+          <li><a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Accenture%20North%20America/hzmoNKtzvAzXsEqx8_Accenture%20North%20America_EYcz7HBvG9Fr2wv8W_1713264307152_completion_certificate.pdf" target="_blank" rel="noopener">Data Analytics and Visualization Job Simulation</a><small>Accenture North America, on Forage</small></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Education</h2>
+        <ul class="plain">
+          <li>Bachelor of Engineering, Computer Science<small>SRM Institute of Science and Technology, Chennai · 2017 – 2021</small><small>CGPA 7.64/10, Distinction</small></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="contact" id="contact">
+    <h2>Have campaigns that need running?</h2>
+    <p>I'm in Bengaluru. Email is the quickest way to reach me.</p>
+    <div class="cta">
+      <a class="btn solid" href="mailto:kirankumarrau@gmail.com">kirankumarrau@gmail.com</a>
+      <a class="btn" href="https://www.linkedin.com/in/kumarkiran2/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://codebasics.io/portfolio/Kiran-Kumar" target="_blank" rel="noopener">Codebasics portfolio</a>
+    </div>
+  </div>
+
+  <footer>Kiran Kumar · Bengaluru, India</footer>
+</div>
+<script>
+(function () {
+  var root = document.documentElement;
+  root.classList.add('js');
+  var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // scroll reveal: section headings, cards, jobs, lists
+  var groups = ['section h2', '.lede', '.cards', '.note', '.job', '.skills > div', '.plain', '.contact'];
+  document.querySelectorAll(groups.join(',')).forEach(function (el) { el.classList.add('reveal'); });
+  document.querySelectorAll('.cards').forEach(function (grid) {
+    grid.classList.remove('reveal');
+    Array.prototype.forEach.call(grid.children, function (c, n) { c.classList.add('reveal'); c.style.setProperty('--i', n); });
+  });
+
+  function countUp(el) {
+    var end = +el.dataset.count, pre = el.dataset.pre || '', suf = el.dataset.suf || '', t0 = null, dur = 1400;
+    function step(t) {
+      if (!t0) t0 = t;
+      var p = Math.min((t - t0) / dur, 1), v = Math.round(end * (1 - Math.pow(1 - p, 3)));
+      el.textContent = pre + v.toLocaleString('en-IN') + suf;
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  if (!('IntersectionObserver' in window)) {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('in');
+      if (!still) e.target.querySelectorAll('[data-count]').forEach(countUp);
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+})();
+</script>
+</body>
+</html>
